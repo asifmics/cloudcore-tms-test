@@ -8,4 +8,3 @@ use Illuminate\Support\Facades\Route;
     return $request->user();
 })->middleware('auth:api');*/
 
-Route::apiResource('/users',UserController::class)->only(['index','store','show']);
