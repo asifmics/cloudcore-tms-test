@@ -1,3 +1,4 @@
+
 ## Project setup
 ```
 composer install
@@ -23,4 +24,10 @@ php artisan migrate
 npm install
 npm run dev
 
+```
+
+## Api Documentation
+
+```
+http://localhost/docs/api
 ```
