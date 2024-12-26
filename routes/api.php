@@ -1,10 +1,14 @@
 <?php
 
-use App\Http\Controllers\UserController;
-use Illuminate\Http\Request;
+
+use App\Http\Controllers\Api\TaskController;
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Support\Facades\Route;
 
-/*Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');*/
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('/users',UserController::class)->only(['index','store','show']);
+    Route::apiResource('/tasks',TaskController::class)->only(['index','show','destroy']);
+});
+
+
 
